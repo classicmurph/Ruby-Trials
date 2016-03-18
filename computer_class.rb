@@ -14,7 +14,14 @@ class Computer
         puts "#{username} created @{filename} at #{time}."
     end
 
+    def update(filename)
+        @files[filename] = time
+    puts "#{username} updated @{filename} at #{time}."
+    end
+
     def Computer.get_users
         @@users
     end
-end    
+end
+
+my_computer = Computer.new("Dean", 649765)
